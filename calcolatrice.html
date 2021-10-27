@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>calcolatrice</title>
+  </head>
+
+  <style>
+    td,
+    th {
+      border: 1px solid black;
+    }
+  </style>
+
+  <body>
+    <script src = "https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+
+    <table style="border: 1px solid black" id="contenitore">
+  
+    </table>
+
+    <input type="text" id="numero" >
+    <input type="text" id="segno" >
+    <input type="text" id="numero2" >
+    <button id="btn1"></button>
+
+    <script>
+     $("#btn1").click(function () {
+        var n1 = parseInt($("#numero").val());
+        var stringa = " <td>" + n1 + "</td> ";
+        var segno= $("#segno").val();
+        var stringa2=" <td> " + segno + "</td>"
+        var n2 = parseInt($("#numero2").val());
+        var stringa3 = "<td>" + n2 + "</td> ";
+        
+        var risultato=n1 +segno+n2;
+        var stringaR="<td>" + risultato + "</td> ";
+        $("#contenitore").append(stringa);
+        $("#contenitore").append(stringa2);
+        $("#contenitore").append(stringa3);
+        $("#contenitore").append(stringaR);
+        $("#contenitore").append("<tr>" +"</tr> ");
+    });
+    </script>
+  </body>
+</html>
